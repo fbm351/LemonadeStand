@@ -129,6 +129,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="209" y="175" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="addLemonsToInventoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4HP-ms-1ay"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EU-oZ-aAJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -138,6 +141,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="209" y="204" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="addIceCubesToInventoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AwE-To-ATn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vk8-pg-iPH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -147,6 +153,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="296" y="175" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="removeLemonsFromInventoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z91-0x-Y94"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQm-9X-UAx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -156,6 +165,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="296" y="204" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="removeIceCubesFromInventoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5s-nM-6bf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How should you mix your brew today?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7v-Ou-k1W">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -210,6 +222,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="209" y="328" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="addLemonsToBrewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Al-iR-63d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNi-6N-M8h">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -219,6 +234,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="209" y="357" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="addIceCubesToBrewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jq-Ec-agw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YQ-Ie-tSM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -228,6 +246,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="296" y="328" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="removeLemonsFromBrewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4M8-y5-w1Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-Ov-xT3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -237,6 +258,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="296" y="357" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="removeIceCubesFromBrewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aWo-Hg-Z2S"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-tr-Ot0">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -258,6 +282,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="591" width="343" height="32"/>
                                 </variation>
+                                <connections>
+                                    <action selector="startTheDayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTZ-OZ-8IY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Forecast" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-zq-gQY">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -336,6 +363,16 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="iceCubesInBrewLabel" destination="pZe-NI-P7r" id="Aqw-cD-30n"/>
+                        <outlet property="iceCubesInInventoryLabel" destination="6Lb-6b-PjV" id="UQ6-ba-Q0S"/>
+                        <outlet property="iceCubesToPurchaseLabel" destination="pHG-w6-UxE" id="h2n-gI-z7E"/>
+                        <outlet property="lemonsInBrewLabel" destination="o6Y-AJ-xSm" id="buF-Kv-2rm"/>
+                        <outlet property="lemonsInInventoryLabel" destination="SwZ-2r-io2" id="fh4-VT-MXE"/>
+                        <outlet property="lemonsToPurchaseLabel" destination="clS-EO-QSQ" id="Epz-ur-6A7"/>
+                        <outlet property="moneyYouHaveLabel" destination="8n2-HS-qfJ" id="V4V-Ot-88k"/>
+                        <outlet property="todaysForecastImageView" destination="MhA-PT-0pW" id="Pey-g5-8Z5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
