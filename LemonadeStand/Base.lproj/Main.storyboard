@@ -61,6 +61,12 @@
                                     <rect key="frame" x="16" y="135" width="203" height="21"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mild" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-PT-0pW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="281" y="461" width="60" height="60"/>
+                                </variation>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2: Mix your lemonade." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCi-yE-rHt">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -253,12 +259,15 @@
                                     <rect key="frame" x="16" y="591" width="343" height="32"/>
                                 </variation>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mild" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-PT-0pW">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Forecast" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBh-zq-gQY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="52" y="49" width="60" height="60"/>
+                                    <rect key="frame" x="276" y="519" width="71" height="54"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -268,6 +277,7 @@
                                 <exclude reference="SwZ-2r-io2"/>
                                 <exclude reference="6Lb-6b-PjV"/>
                                 <exclude reference="1Mb-pw-uZR"/>
+                                <exclude reference="MhA-PT-0pW"/>
                                 <exclude reference="sCi-yE-rHt"/>
                                 <exclude reference="aNh-c3-ecO"/>
                                 <exclude reference="RnI-gr-eFg"/>
@@ -289,7 +299,7 @@
                                 <exclude reference="ssM-Ov-xT3"/>
                                 <exclude reference="bEz-tr-Ot0"/>
                                 <exclude reference="GSz-wr-du1"/>
-                                <exclude reference="MhA-PT-0pW"/>
+                                <exclude reference="eBh-zq-gQY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -299,6 +309,7 @@
                                 <include reference="SwZ-2r-io2"/>
                                 <include reference="6Lb-6b-PjV"/>
                                 <include reference="1Mb-pw-uZR"/>
+                                <include reference="MhA-PT-0pW"/>
                                 <include reference="sCi-yE-rHt"/>
                                 <include reference="aNh-c3-ecO"/>
                                 <include reference="RnI-gr-eFg"/>
@@ -320,7 +331,7 @@
                                 <include reference="ssM-Ov-xT3"/>
                                 <include reference="bEz-tr-Ot0"/>
                                 <include reference="GSz-wr-du1"/>
-                                <include reference="MhA-PT-0pW"/>
+                                <include reference="eBh-zq-gQY"/>
                             </mask>
                         </variation>
                     </view>
