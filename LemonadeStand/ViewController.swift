@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     var iceCubesInInventory = 1
     var lemonsToBuy = 0
     var iceCubesToBuy = 0
+    var lemonsInBrew = 0
+    var iceCubesInBrew = 0
     
     //MARK: - Constants
     
@@ -89,23 +91,52 @@ class ViewController: UIViewController {
         switch buttonPressed.tag {
         case 1:
             //Add a lemon to inventory
-            self.usersMoney -= kCostPerLemon
-            self.lemonsInInventory += 1
-            self.lemonsToBuy += 1
+            
+            if self.usersMoney < 2 {
+                self.showAlertWithText(message: "Not enough money to purchase lemons!")
+            }
+            else {
+                self.usersMoney -= kCostPerLemon
+                self.lemonsInInventory += 1
+                self.lemonsToBuy += 1
+            }
+            
         case 2:
             //Remove a lemon from inventory
-            self.usersMoney += kCostPerLemon
-            self.lemonsInInventory -= 1
-            self.lemonsToBuy -= 1
+            
+            if self.lemonsInInventory <= 1 {
+                self.showAlertWithText(message: "Must have atleast 1 lemon in inventory")
+            }
+            else {
+                self.usersMoney += kCostPerLemon
+                self.lemonsInInventory -= 1
+                self.lemonsToBuy -= 1
+            }
+            
         case 3:
-            //Add ice cube to inventory
-            self.usersMoney -= kCostPerIceCube
-            self.iceCubesInInventory += 1
-            self.iceCubesToBuy += 1
+            //Add an ice cube to inventory
+            
+            if self.usersMoney < 1 {
+                self.showAlertWithText(message: "Not enough money to purchase ice cubes!")
+            }
+            else {
+                self.usersMoney -= kCostPerIceCube
+                self.iceCubesInInventory += 1
+                self.iceCubesToBuy += 1
+            }
+            
         case 4:
-            self.usersMoney += kCostPerIceCube
-            self.iceCubesInInventory -= 1
-            self.iceCubesToBuy -= 1
+            //Remove an ice cube from inventory
+            
+            if self.iceCubesInInventory < 1 {
+                self.showAlertWithText(message: "No more ice cubes in inventory")
+            }
+            else {
+                self.usersMoney += kCostPerIceCube
+                self.iceCubesInInventory -= 1
+                self.iceCubesToBuy -= 1
+            }
+            
         default:
             println("Error")
         }
@@ -114,14 +145,25 @@ class ViewController: UIViewController {
         
     }
     
+    func brewMixture (buttonPressed: UIButton) {
+        
+    }
+    
+    func showAlertWithText (header: String = "Warning", message: String) {
+        var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func updateMainScree() {
         self.moneyYouHaveLabel.text = "$\(self.usersMoney)"
         self.lemonsInInventoryLabel.text = "\(self.lemonsInInventory)"
         self.iceCubesInInventoryLabel.text = "\(self.iceCubesInInventory)"
         self.lemonsToPurchaseLabel.text = "\(self.lemonsToBuy)"
         self.iceCubesToPurchaseLabel.text = "\(self.iceCubesToBuy)"
+        self.lemonsInBrewLabel.text = "\(self.lemonsInBrew)"
+        self.iceCubesInBrewLabel.text = "\(self.iceCubesInBrew)"
+        
     }
-    
-    
 }
 
