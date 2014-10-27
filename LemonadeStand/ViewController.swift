@@ -86,6 +86,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startTheDayButtonPressed(sender: UIButton) {
+        self.newDayStarted()
     }
     
     //MARK: - Helper Methods
@@ -203,14 +204,46 @@ class ViewController: UIViewController {
         
     }
     
-    func showAlertWithText (header: String = "Warning", message: String) {
-        var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+    func newDayStarted() {
+        if self.lemonsInBrew == 0 {
+            self.showAlertWithText(message: "Must have atleast 1 lemon in brew!")
+        }
+        else {
+            println("\(self.calculateAcidity())")
+        }
     }
     
-    func newDayStarted() {
+    func calculateAcidity() -> Int {
+        var acidity = 0
+        var lemonadeRatio = 1.0
+        var ratioString = ""
         
+        if iceCubesInBrew != 0 {
+            lemonadeRatio = Double(self.lemonsInBrew) / Double(self.iceCubesInBrew)
+        }
+        else {
+            lemonadeRatio = Double(self.lemonsInBrew)
+        }
+        
+        if lemonadeRatio == 1 && self.iceCubesInBrew != 0 {
+            //Acidic
+            acidity = 2
+            ratioString = "Equal"
+        }
+        else if lemonadeRatio >= 1 {
+            //Equal
+            acidity = 1
+            ratioString = "Acidic"
+        }
+        else {
+            //Diluted
+            acidity = 3
+            ratioString = "Diluted"
+        }
+        
+        println("Lemonade Ratio: \(lemonadeRatio)")
+        println("\(ratioString)")
+        return acidity
     }
     
     func updateMainScree() {
@@ -222,6 +255,12 @@ class ViewController: UIViewController {
         self.lemonsInBrewLabel.text = "\(self.lemonsInBrew)"
         self.iceCubesInBrewLabel.text = "\(self.iceCubesInBrew)"
         
+    }
+    
+    func showAlertWithText (header: String = "Warning", message: String) {
+        var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 
