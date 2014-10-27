@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     //MARK: - Variable
     
+    var customers:[Customer] = []
     var usersMoney = 10
     var lemonsInInventory = 1
     var iceCubesInInventory = 1
@@ -210,6 +211,13 @@ class ViewController: UIViewController {
         }
         else {
             println("\(self.calculateAcidity())")
+            self.customers = Factory.createCustomers()
+            
+            var index = 1
+            for customer in customers {
+                println("custumer \(index) taste:\(customer.tastePreference)")
+                index++
+            }
         }
     }
     

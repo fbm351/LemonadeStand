@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Customer {
+struct Customer {
     var tastePreference = 1.0
 }
