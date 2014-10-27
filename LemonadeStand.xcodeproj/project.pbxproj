@@ -13,6 +13,7 @@
 		D323B99119F97B19005C2EF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D323B99019F97B19005C2EF5 /* Images.xcassets */; };
 		D323B99419F97B19005C2EF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D323B99219F97B19005C2EF5 /* LaunchScreen.xib */; };
 		D323B9A019F97B1A005C2EF5 /* LemonadeStandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323B99F19F97B1A005C2EF5 /* LemonadeStandTests.swift */; };
+		D38A694619FEDFB6003C6E61 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38A694519FEDFB6003C6E61 /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D323B99919F97B1A005C2EF5 /* LemonadeStandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonadeStandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D323B99E19F97B1A005C2EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D323B99F19F97B1A005C2EF5 /* LemonadeStandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonadeStandTests.swift; sourceTree = "<group>"; };
+		D38A694519FEDFB6003C6E61 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				D323B98919F97B19005C2EF5 /* AppDelegate.swift */,
 				D323B98B19F97B19005C2EF5 /* ViewController.swift */,
+				D38A694519FEDFB6003C6E61 /* Customer.swift */,
 				D323B98D19F97B19005C2EF5 /* Main.storyboard */,
 				D323B99019F97B19005C2EF5 /* Images.xcassets */,
 				D323B99219F97B19005C2EF5 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38A694619FEDFB6003C6E61 /* Customer.swift in Sources */,
 				D323B98C19F97B19005C2EF5 /* ViewController.swift in Sources */,
 				D323B98A19F97B19005C2EF5 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +411,7 @@
 				D323B9A519F97B1A005C2EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D323B9A619F97B1A005C2EF5 /* Build configuration list for PBXNativeTarget "LemonadeStandTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				D323B9A819F97B1A005C2EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
