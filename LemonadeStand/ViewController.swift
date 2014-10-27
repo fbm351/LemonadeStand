@@ -70,15 +70,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addLemonsToBrewButtonPressed(sender: UIButton) {
+        self.brewMixture(sender)
     }
     
     @IBAction func removeLemonsFromBrewButtonPressed(sender: UIButton) {
+        self.brewMixture(sender)
     }
     
     @IBAction func addIceCubesToBrewButtonPressed(sender: UIButton) {
+        self.brewMixture(sender)
     }
     
     @IBAction func removeIceCubesFromBrewButtonPressed(sender: UIButton) {
+        self.brewMixture(sender)
     }
     
     @IBAction func startTheDayButtonPressed(sender: UIButton) {
@@ -146,6 +150,56 @@ class ViewController: UIViewController {
     }
     
     func brewMixture (buttonPressed: UIButton) {
+        switch buttonPressed.tag {
+        case 1:
+            //Add a lemon to brew
+            
+            if self.lemonsInInventory < 1 {
+                self.showAlertWithText(message: "Not enough lemons in inventory!")
+            }
+            else {
+                self.lemonsInInventory -= 1
+                self.lemonsInBrew += 1
+            }
+            
+        case 2:
+            //Remove a lemon from brew
+            
+            if self.lemonsInBrew <= 1 {
+                self.showAlertWithText(message: "Must have atleast 1 lemon in brew")
+            }
+            else {
+                self.lemonsInInventory += 1
+                self.lemonsInBrew -= 1
+            }
+            
+        case 3:
+            //Add an ice cube to brew
+            
+            if self.iceCubesInInventory < 1 {
+                self.showAlertWithText(message: "Not enough ice cubes in inventory!")
+            }
+            else {
+                self.iceCubesInInventory -= 1
+                self.iceCubesInBrew += 1
+            }
+            
+        case 4:
+            //Remove an ice cube from brew
+            
+            if self.iceCubesInBrew < 1 {
+                self.showAlertWithText(message: "No more ice cubes to remove")
+            }
+            else {
+                self.iceCubesInInventory += 1
+                self.iceCubesInBrew -= 1
+            }
+            
+        default:
+            println("Error")
+        }
+        
+        self.updateMainScree()
         
     }
     
@@ -153,6 +207,10 @@ class ViewController: UIViewController {
         var alert = UIAlertController(title: header, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func newDayStarted() {
+        
     }
     
     func updateMainScree() {
