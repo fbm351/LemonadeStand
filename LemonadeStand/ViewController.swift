@@ -211,7 +211,7 @@ class ViewController: UIViewController {
         }
         else {
             println("\(self.calculateAcidity())")
-            self.customers = Factory.createCustomers()
+            self.customers = Factory.createCustomersWithWeatherFactor(-3)
             
             var index = 1
             for customer in customers {
