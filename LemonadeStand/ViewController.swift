@@ -210,15 +210,22 @@ class ViewController: UIViewController {
             self.showAlertWithText(message: "Must have atleast 1 lemon in brew!")
         }
         else {
-            println("\(self.calculateAcidity())")
             self.customers = Factory.createCustomersWithWeatherFactor(self.generateDaileyWeather())
-            
-            var index = 1
-            for customer in customers {
-                println("custumer \(index) taste:\(customer.tastePreference)")
-                index++
-            }
+            self.usersMoney += DailySalesBrain.calculateDailySales(self.customers, acidity: self.calculateAcidity())
+            self.lemonsToBuy = 0
+            self.iceCubesToBuy = 0
+            self.lemonsInBrew = 0
+            self.iceCubesInBrew = 0
         }
+        
+        if self.lemonsInInventory == 0 && self.usersMoney <= 1 {
+            self.showAlertWithText(header: "Game Over!!!", message: "You are out of money and out of inventory!")
+            self.usersMoney = 10
+            self.lemonsInInventory = 1
+            self.iceCubesInInventory = 1
+        }
+        
+        self.updateMainScree()
     }
     
     func calculateAcidity() -> Int {
@@ -248,16 +255,14 @@ class ViewController: UIViewController {
             acidity = 3
             ratioString = "Diluted"
         }
-        
-        println("Lemonade Ratio: \(lemonadeRatio)")
-        println("\(ratioString)")
+
         return acidity
     }
     
     func generateDaileyWeather () -> Int {
         var customerWeatherOffset = 0
         var randomWeatherIndex = Int(arc4random_uniform(UInt32(3)) + 1)
-        println("Random Weather Index: \(randomWeatherIndex)")
+        
         switch randomWeatherIndex {
         case 1:
             customerWeatherOffset = -3
@@ -271,7 +276,7 @@ class ViewController: UIViewController {
         default:
             println("Error")
         }
-        println("\(customerWeatherOffset)")
+        
         return customerWeatherOffset
     }
     

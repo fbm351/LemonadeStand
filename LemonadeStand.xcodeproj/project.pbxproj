@@ -15,6 +15,7 @@
 		D323B9A019F97B1A005C2EF5 /* LemonadeStandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323B99F19F97B1A005C2EF5 /* LemonadeStandTests.swift */; };
 		D38A694619FEDFB6003C6E61 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38A694519FEDFB6003C6E61 /* Customer.swift */; };
 		D38A694819FEE09A003C6E61 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38A694719FEE09A003C6E61 /* Factory.swift */; };
+		D38A694A1A0167A7003C6E61 /* DailySalesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38A69491A0167A7003C6E61 /* DailySalesBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D323B99F19F97B1A005C2EF5 /* LemonadeStandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonadeStandTests.swift; sourceTree = "<group>"; };
 		D38A694519FEDFB6003C6E61 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		D38A694719FEE09A003C6E61 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		D38A69491A0167A7003C6E61 /* DailySalesBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySalesBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				D323B98919F97B19005C2EF5 /* AppDelegate.swift */,
 				D323B98B19F97B19005C2EF5 /* ViewController.swift */,
+				D38A69491A0167A7003C6E61 /* DailySalesBrain.swift */,
 				D38A694519FEDFB6003C6E61 /* Customer.swift */,
 				D38A694719FEE09A003C6E61 /* Factory.swift */,
 				D323B98D19F97B19005C2EF5 /* Main.storyboard */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38A694A1A0167A7003C6E61 /* DailySalesBrain.swift in Sources */,
 				D38A694819FEE09A003C6E61 /* Factory.swift in Sources */,
 				D38A694619FEDFB6003C6E61 /* Customer.swift in Sources */,
 				D323B98C19F97B19005C2EF5 /* ViewController.swift in Sources */,
