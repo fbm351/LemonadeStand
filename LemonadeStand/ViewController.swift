@@ -211,7 +211,7 @@ class ViewController: UIViewController {
         }
         else {
             println("\(self.calculateAcidity())")
-            self.customers = Factory.createCustomersWithWeatherFactor(-3)
+            self.customers = Factory.createCustomersWithWeatherFactor(self.generateDaileyWeather())
             
             var index = 1
             for customer in customers {
@@ -252,6 +252,27 @@ class ViewController: UIViewController {
         println("Lemonade Ratio: \(lemonadeRatio)")
         println("\(ratioString)")
         return acidity
+    }
+    
+    func generateDaileyWeather () -> Int {
+        var customerWeatherOffset = 0
+        var randomWeatherIndex = Int(arc4random_uniform(UInt32(3)) + 1)
+        println("Random Weather Index: \(randomWeatherIndex)")
+        switch randomWeatherIndex {
+        case 1:
+            customerWeatherOffset = -3
+            self.todaysForecastImageView.image = UIImage(named: "Cold")
+        case 2:
+            customerWeatherOffset = 0
+            self.todaysForecastImageView.image = UIImage(named: "Mild")
+        case 3:
+            customerWeatherOffset = 4
+            self.todaysForecastImageView.image = UIImage(named: "Warm")
+        default:
+            println("Error")
+        }
+        println("\(customerWeatherOffset)")
+        return customerWeatherOffset
     }
     
     func updateMainScree() {
